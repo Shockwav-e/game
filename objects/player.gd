@@ -221,13 +221,11 @@ func action_shoot():
 			impact_instance.position = raycast.get_collision_point() + (raycast.get_collision_normal() / 10)
 			impact_instance.look_at(camera.global_transform.origin, Vector3.UP, true)
 			
-		var knockback = random_vec2(weapon.min_knockback, weapon.max_knockback)
-		# print('knockback', knockback)
+		# Visual kick only: the weapon model dips, aim stays true.
+		# (The old code added a permanent random camera/rotation kick per
+		#  shot with no recovery, so holding fire walked your aim off the
+		#  crosshair - which reads as "not shooting where I aim".)
 		container.position.z += 0.25 # Knockback of weapon visual
-		camera.rotation.x += knockback.x # Knockback of camera
-		rotation.y += knockback.y
-		rotation_target.x += knockback.x
-		rotation_target.y += knockback.y
 		movement_velocity += Vector3(0, 0, weapon.knockback) # Knockback
 
 # Toggle between available weapons (listed in 'weapons')

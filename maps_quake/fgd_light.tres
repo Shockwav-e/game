@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDPointClass" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_point_class.gd" id="1"]
+[ext_resource type="Script" path="res://maps_quake/lq_light.gd" id="2"]
+
+[resource]
+script = ExtResource("1")
+script_class = ExtResource("2")
+classname = "light"
+description = "Quake light entity, converted to OmniLight3D."
+node_class = "OmniLight3D"

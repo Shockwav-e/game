@@ -21,7 +21,7 @@ func _process(_delta: float) -> bool:
 		var screen_center: Vector2 = Vector2(root.size) * 0.5
 		var drawn_center: Vector2 = crosshair.get_global_rect().get_center()
 		var err: float = screen_center.distance_to(drawn_center)
-		print("TEST rect=", crosshair.get_global_rect(), " tex=", crosshair.texture.get_size(), " expand=", crosshair.expand_mode, " stretch=", crosshair.stretch_mode)
+		print("TEST rect=", crosshair.get_global_rect(), " size_prop=", crosshair.size, " offs=", crosshair.offset_left, ",", crosshair.offset_top, ",", crosshair.offset_right, ",", crosshair.offset_bottom)
 		print("TEST CROSSHAIR_" + ("PASS" if err <= 2.0 else "FAIL"))
 		quit()
 		return true

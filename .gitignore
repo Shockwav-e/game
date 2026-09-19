@@ -1,25 +1,89 @@
-# Godot 4+ specific ignores
+# ================= Godot 4 =================
+# Generated editor data (import cache, UID cache, extension list, logs).
+# NEVER commit this - it regenerates on import.
 .godot/
-rust/target/
-rust/bin/
-cpp/bin/
-cpp/godot-cpp/
-audio_realistic/sonniss_gdc2026/
 
-# Godot-specific ignores
+# Legacy Godot 3 import directory (harmless if absent).
 .import/
+
+# NOTE: per-asset *.import files (icon.png.import, *.glb.import, ...) ARE
+# tracked on purpose - they hold import settings (scale, materials, LODs).
+
+# Export system: local preset output and export templates config.
 export.cfg
 export_presets.cfg
+builds/
+exports/
+*.apk
+*.aab
+*.pck
+*.zip
 
-# Imported translations (automatically generated from CSV files)
-*.translation
+# FuncGodot / TrenchBroom working files.
+maps_quake/autosave/
+*.tbautosave
 
-# Mono-specific ignores
+# ============== GDExtension binaries ==============
+# Compiled output - rebuild via cargo / scons, don't commit.
+rust/bin/
+cpp/bin/
+*.dll
+*.so
+*.dylib
+
+# ============== Rust (cargo) ==============
+rust/target/
+**/*.rs.bk
+Cargo.lock
+rust/.cargo/
+
+# ============== C++ (scons / MSVC) ==============
+cpp/godot-cpp/
+.sconsign.dblite
+.sconsign*
+*.sconsign
+*.o
+*.os
+*.obj
+*.lib
+*.a
+*.exp
+*.pdb
+.vs/
+out/
+x64/
+Debug/
+Release/
+
+# ============== Mono / C# (unused now, kept for safety) ==============
 .mono/
 data_*/
 mono_crash.*.json
 
-# Kenney ignores
+# ============== Large local downloads ==============
+# Sonniss GDC bundle (~7.5 GB) - each dev downloads it via
+# audio_realistic/get_sonniss.ps1 instead of cloning it.
+audio_realistic/sonniss_gdc2026/
+
+# ============== Editor / IDE ==============
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+*.tmp
+*.log
+
+# ============== OS junk ==============
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+
+# ============== Translations (generated) ==============
+*.translation
+
+# ============== Misc ==============
 build/
-# https://github.com/godotengine/godot/issues/82270
-*~*.TMP

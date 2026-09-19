@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/quake_arena.gd" id="1"]
+[ext_resource type="Script" path="res://addons/func_godot/src/map/func_godot_map.gd" id="2"]
+[ext_resource type="Resource" path="res://maps_quake/lq_map_settings.tres" id="3"]
+[ext_resource type="Environment" path="res://scenes/realistic-environment.tres" id="4"]
+
+[node name="QuakeArena" type="Node3D"]
+script = ExtResource("1")
+
+[node name="FuncGodotMap" type="Node3D" parent="."]
+script = ExtResource("2")
+map_settings = ExtResource("3")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("4")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 30, 0)
+shadow_enabled = true

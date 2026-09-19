@@ -26,6 +26,10 @@ config/icon="res://icon-godot.png"
 
 Audio="*res://scripts/audio.gd"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/func_godot/plugin.cfg")
+
 [display]
 
 window/size/viewport_width=1280

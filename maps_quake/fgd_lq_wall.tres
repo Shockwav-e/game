@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDSolidClass" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_solid_class.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+collision_shape_type = 2
+collision_mask = 0
+classname = "func_wall"
+description = "LibreQuake solid wall. StaticBody3D with concave collision."
+node_class = "StaticBody3D"

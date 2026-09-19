@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="QuakeMapFile"
+uid="uid://djcrwtvrm3nnr"
+path="res://.godot/imported/lqdm13.map-a615b481618d8d768236830e8065344a.tres"
+
+[deps]
+
+source_file="res://maps_quake/lqdm13.map"
+dest_files=["res://.godot/imported/lqdm13.map-a615b481618d8d768236830e8065344a.tres"]
+
+[params]
+

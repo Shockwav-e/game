@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDSolidClass" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/func_godot/src/fgd/func_godot_fgd_solid_class.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+build_visuals = false
+collision_shape_type = 0
+classname = "trigger_relay"
+description = "Relay trigger. Invisible and inert for now."
+node_class = "Node3D"
