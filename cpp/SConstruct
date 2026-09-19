@@ -1,0 +1,8 @@
+# Minimal SConstruct for godot-cpp. Requires godot-cpp submodule at cpp/godot-cpp.
+# Usage (from D:/game/cpp): scons platform=windows target=template_debug
+import os
+env = SConscript("godot-cpp/SConstruct")
+env.Append(CPPPATH=["src/"])
+sources = Glob("src/*.cpp") + Glob("*.cpp")
+library = env.SharedLibrary("bin/wandstrike_cpp{}{}".format(env["suffix"], env["SHLIBSUFFIX"]), source=sources)
+Default(library)

@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3]
+
+[ext_resource type="Texture2D" path="res://assets_realistic/textures/asphalt_02_1k/albedo.jpg" id="1_alb"]
+[ext_resource type="Texture2D" path="res://assets_realistic/textures/asphalt_02_1k/normal.jpg" id="2_nrm"]
+[ext_resource type="Texture2D" path="res://assets_realistic/textures/asphalt_02_1k/roughness.jpg" id="3_rgh"]
+
+[resource]
+albedo_texture = ExtResource("1_alb")
+metallic_specular = 0.5
+roughness = 1.0
+roughness_texture = ExtResource("3_rgh")
+normal_enabled = true
+normal_texture = ExtResource("2_nrm")
+uv1_scale = Vector3(8, 8, 8)
+texture_filter = 2

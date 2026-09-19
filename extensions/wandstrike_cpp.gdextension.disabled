@@ -1,0 +1,9 @@
+[configuration]
+entry_symbol = "wandstrike_init"
+compatibility_minimum = "4.2"
+
+[libraries]
+windows.debug.x86_64 = "res://cpp/bin/wandstrike_cpp.windows.debug.x86_64.dll"
+windows.release.x86_64 = "res://cpp/bin/wandstrike_cpp.windows.release.x86_64.dll"
+linux.debug.x86_64 = "res://cpp/bin/libwandstrike_cpp.linux.debug.x86_64.so"
+linux.release.x86_64 = "res://cpp/bin/libwandstrike_cpp.linux.release.x86_64.so"
